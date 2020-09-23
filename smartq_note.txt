@@ -1,0 +1,23 @@
+SMARTQ
+------
+Queue system for Immigration Malaysia
+
+List of Apis
+------------
+1. `https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination}&key=${apikey}&mode=${mode}`;
+GOOGLE_API_KEY = AIzaSyDufaLjQWXcZUqE7kE-b7E0zmcPCY8KrkI
+mode= driving
+
+Base URL : https://smartq-server.heitecharena.com/smartq/
+ex: https://smartq-server.heitecharena.com/smartq/organisation.json?quesortImi
+
+2. /organisation.json
+3. /organisation.json?addid={orgId}
+4. /organisation.json?distance&lat=lat={lat}&long={long}
+5. /organisation.json?imi-info={orgId}
+6. /organisation.json?quesortImi
+
+IMAGE_URL = https://smartq-server.heitecharena.com/smartq/images/1014091.jpg
+
+
+https://onewoorks-solutions.com/smartq/images/1001061.jpg
