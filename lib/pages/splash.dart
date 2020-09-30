@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class SplashPage extends StatefulWidget {
   _SplashPage createState() => _SplashPage();
@@ -7,7 +8,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPage extends State<SplashPage> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 3));
+    Future.delayed(Duration(seconds: 7));
 
     super.initState();
   }
@@ -16,25 +17,40 @@ class _SplashPage extends State<SplashPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xff005d2d),
+        backgroundColor: Colors.cyan[400],
         body: Center(
           child: Container(
             width: 300,
-            child: Column(mainAxisAlignment: MainAxisAlignment.center,
-                // crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Image(
-                    image: AssetImage("assets/images/imi_logo.png"),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              // crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image(
+                  image: AssetImage(
+                    "assets/images/logo.jpeg",
                   ),
-                  SizedBox(
-                    height: 20,
+                  // width: 500,
+                  // height: 500,
+                ),
+                // SizedBox(
+                //   height: 20,
+                // ),
+                Text(
+                  "Queue system make your waiting easy, Wait anywhere you like!",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
                   ),
-                  Text(
-                    "Queue system make your waiting easy, Wait anywhere you like!",
-                    style: TextStyle(color: Colors.grey, fontSize: 20),
-                  ),
-                  // )
-                ]),
+                  textAlign: TextAlign.center,
+                ),SizedBox(
+            height: 30.0,
+          ),
+          SpinKitDualRing(
+            color: Colors.cyan[50],
+          ),
+                // )
+              ],
+            ),
           ),
         ),
       ),
