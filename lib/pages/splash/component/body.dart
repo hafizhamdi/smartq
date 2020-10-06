@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-class SplashPage extends StatefulWidget {
-  _SplashPage createState() => _SplashPage();
+class Body extends StatefulWidget {
+  @override
+  _BodyState createState() => _BodyState();
 }
 
-class _SplashPage extends State<SplashPage> {
-  @override
-  void initState() {
-    Future.delayed(Duration(seconds: 7));
-
-    super.initState();
-  }
-
+class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -42,12 +36,13 @@ class _SplashPage extends State<SplashPage> {
                     fontSize: 20,
                   ),
                   textAlign: TextAlign.center,
-                ),SizedBox(
-            height: 30.0,
-          ),
-          SpinKitDualRing(
-            color: Colors.cyan[50],
-          ),
+                ),
+                SizedBox(
+                  height: 30.0,
+                ),
+                SpinKitDualRing(
+                  color: Colors.cyan[50],
+                ),
                 // )
               ],
             ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smartq/pages/detailscreen.dart';
+import 'package:smartq/pages/detail/detailscreen.dart';
 
 class ItemList extends StatelessWidget {
   final hospitalname, address, distance;
