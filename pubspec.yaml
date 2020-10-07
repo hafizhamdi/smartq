@@ -26,6 +26,7 @@ dependencies:
   equatable: ^1.2.5
   http: ^0.12.2
   location: ^3.0.2
+  mqtt_client: ^7.2.1
   flutter:
     sdk: flutter
 
