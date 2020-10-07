@@ -27,6 +27,7 @@ dependencies:
   http: ^0.12.2
   location: ^3.0.2
   font_awesome_flutter: ^8.2.0
+  mqtt_client: ^7.2.1
   flutter:
     sdk: flutter
 

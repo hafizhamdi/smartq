@@ -5,8 +5,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:mqtt_client/mqtt_browser_client.dart';
 import 'package:smartq/demo/demo_gmap.dart';
 import 'package:smartq/pages/queue_list.dart';
+import 'package:smartq/repositories/mqtt_client.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -36,6 +38,16 @@ class _MyHomePageState extends State<MyHomePage> {
     getBytesFromAsset("assets/markers/imi_marker.png", 48).then((onValue) {
       pinLocationIcon = BitmapDescriptor.fromBytes(onValue);
     });
+
+    print("try connecting mqtt...");
+    MqttBrowserClient client =
+        MqttBrowserClient.withPort("broker.emqx.io", "flutter_client", 1883);
+    // // client.websocketProtocols = ["mqttv3.11"];
+    client.connect();
+
+    // MqttBrowserClient client = MqttBrowserClient;
+
+    // mqtt.connect();
 
     super.initState();
   }
